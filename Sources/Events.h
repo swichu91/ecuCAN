@@ -40,6 +40,9 @@
 #include "CAN1.h"
 #include "BlueLED.h"
 #include "BitIoLdd2.h"
+#include "DbgTerminal.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -168,6 +171,54 @@ void CAN1_OnFreeTxBuffer(LDD_TUserData *UserDataPtr, LDD_CAN_TMBIndex BufferIdx)
 */
 /* ===================================================================*/
 void CAN1_OnFullRxBuffer(LDD_TUserData *UserDataPtr, LDD_CAN_TMBIndex BufferIdx);
+
+/*
+** ===================================================================
+**     Event       :  Inhr1_OnRxChar (module Events)
+**
+**     Component   :  Inhr1 [AsynchroSerial]
+**     Description :
+**         This event is called after a correct character is received.
+**         The event is available only when the <Interrupt
+**         service/event> property is enabled and either the <Receiver>
+**         property is enabled or the <SCI output mode> property (if
+**         supported) is set to Single-wire mode.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void Inhr1_OnRxChar(void);
+
+/*
+** ===================================================================
+**     Event       :  Inhr1_OnTxChar (module Events)
+**
+**     Component   :  Inhr1 [AsynchroSerial]
+**     Description :
+**         This event is called after a character is transmitted.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void Inhr1_OnTxChar(void);
+
+/*
+** ===================================================================
+**     Event       :  Inhr1_OnTxComplete (module Events)
+**
+**     Component   :  Inhr1 [AsynchroSerial]
+**     Description :
+**         This event indicates that the transmitter is finished
+**         transmitting all data, preamble, and break characters and is
+**         idle. It can be used to determine when it is safe to switch
+**         a line driver (e.g. in RS-485 applications).
+**         The event is available only when both <Interrupt
+**         service/event> and <Transmitter> properties are enabled.
+**     Parameters  : None
+**     Returns     : Nothing
+** ===================================================================
+*/
+void Inhr1_OnTxComplete(void);
 
 /* END Events */
 

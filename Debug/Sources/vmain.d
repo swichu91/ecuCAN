@@ -17,7 +17,9 @@ Sources/vmain.o: ../Sources/vmain.c \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/CAN1.h \
  ../Sources/vmain.h \
  E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/can_t/can_t.h \
- E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/queue/queue.h
+ E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/queue/queue.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h \
+ E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/terminal/terminal.h
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/GreenLED.h:
 
@@ -56,3 +58,7 @@ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/CAN1.h:
 E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/can_t/can_t.h:
 
 E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/queue/queue.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h:
+
+E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/terminal/terminal.h:

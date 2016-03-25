@@ -12,6 +12,8 @@
 #include "CAN1.h"
 
 
+#define CAN_T_RX_QUEUE_SIZE	200
+#define CAN_T_TX_QUEUE_SIZE	200
 #define CAN_T_TIMER_VAL	10
 #define CAN_T_MAX_NR_REGISTERED_FUNCTIONS	50
 

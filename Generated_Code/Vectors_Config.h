@@ -56,6 +56,9 @@
 #include "CAN1.h"
 #include "BlueLED.h"
 #include "BitIoLdd2.h"
+#include "DbgTerminal.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 #include "Events.h"
 
 #ifdef __cplusplus
@@ -95,7 +98,7 @@ extern "C" {
 #define VECTOR_27         (tIsrFunc)&Unhandled_ivINT_SPI1       /* 0x1B -    ivINT_SPI1                    unused by PE */
 #define VECTOR_28         (tIsrFunc)&Unhandled_ivINT_UART0      /* 0x1C -    ivINT_UART0                   unused by PE */
 #define VECTOR_29         (tIsrFunc)&Unhandled_ivINT_UART1      /* 0x1D -    ivINT_UART1                   unused by PE */
-#define VECTOR_30         (tIsrFunc)&Unhandled_ivINT_UART2      /* 0x1E -    ivINT_UART2                   unused by PE */
+#define VECTOR_30         (tIsrFunc)&ASerialLdd1_Interrupt      /* 0x1E 64   ivINT_UART2                   used by PE */
 #define VECTOR_31         (tIsrFunc)&Unhandled_ivINT_ADC0       /* 0x1F -    ivINT_ADC0                    unused by PE */
 #define VECTOR_32         (tIsrFunc)&Unhandled_ivINT_ACMP0      /* 0x20 -    ivINT_ACMP0                   unused by PE */
 #define VECTOR_33         (tIsrFunc)&Unhandled_ivINT_FTM0       /* 0x21 -    ivINT_FTM0                    unused by PE */

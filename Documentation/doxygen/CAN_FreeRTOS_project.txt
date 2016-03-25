@@ -28,6 +28,7 @@
 - \subpage TU1
 - \subpage CAN1
 - \subpage BitIoLdd2
+- \subpage ASerialLdd1
 
 */
 
@@ -62,6 +63,7 @@
 - \subpage TU1
 - \subpage CAN1
 - \subpage BitIoLdd2
+- \subpage ASerialLdd1
 
 */
 

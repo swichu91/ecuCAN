@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : MKE06P80M48SF0RM, Rev. 1, May 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-03-25, 16:21, # CodeGen: 19
+**     Date/Time   : 2016-03-25, 18:57, # CodeGen: 25
 **     Abstract    :
 **
 **     Settings    :
@@ -113,6 +113,9 @@ void Components_Init(void)
   (void)TU1_Init(NULL);
   /* ### BitIO_LDD "BitIoLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd2_Init(NULL);
+  /* ### Asynchro serial "Inhr1" init code ... */
+  Inhr1_Init();
+  /* ###  "DbgTerminal" init code ... */
 }
 #endif /* CPU_COMPONENTS_INIT */
 

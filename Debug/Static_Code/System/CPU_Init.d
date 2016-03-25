@@ -29,7 +29,11 @@ Static_Code/System/CPU_Init.o: ../Static_Code/System/CPU_Init.c \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/CAN1.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BlueLED.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h \
- E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Inhr1.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/PE_Types.h:
 
@@ -92,3 +96,11 @@ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BlueLED.h:
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h:
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Inhr1.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h:

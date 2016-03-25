@@ -51,17 +51,21 @@
       <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\can_t\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\terminal\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\timer_timeout\</Path>
     </SourceCodePaths>
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd2.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BlueLED.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\CAN1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Cpu.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\DbgTerminal.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\GreenLED.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Inhr1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_LDD.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Pins1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\TU1.c</PathName>
@@ -75,17 +79,21 @@
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\can_t\can_t.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\fifo.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\queue.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\terminal\terminal.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\timer_timeout\timer_timeout.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd2.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BlueLED.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\CAN1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\CPU_Config.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Cpu.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\DbgTerminal.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\GreenLED.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\IO_Map.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Inhr1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Init_Config.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_Const.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_Error.h</PathName>
@@ -127,6 +135,7 @@
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\can_t\can_t.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\fifo.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\queue.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\terminal\terminal.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\timer_timeout\timer_timeout.h</PathName>
     </GeneratedHs>
   </FILES>

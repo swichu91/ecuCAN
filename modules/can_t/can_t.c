@@ -23,8 +23,8 @@ void CANt_send_string(LDD_CAN_TMessageID id, LDD_CAN_TFrameType type, char* s);
 void CANt_ParseFrame(uint8_t* data, size_t dlen, uint32_t id);
 
 void CANt_init(void) {
-	can_rx_queue = queue_init(50, sizeof(LDD_CAN_TFrame));
-	can_tx_queue = queue_init(50, sizeof(LDD_CAN_TFrame));
+	can_rx_queue = queue_init(CAN_T_RX_QUEUE_SIZE, sizeof(LDD_CAN_TFrame));
+	can_tx_queue = queue_init(CAN_T_TX_QUEUE_SIZE, sizeof(LDD_CAN_TFrame));
 
 	uint8_t i;
 
@@ -32,7 +32,7 @@ void CANt_init(void) {
 		function_list[i].do_work = NULL;
 		function_list[i].id = 0xFFFF;
 		function_list[i].dptr = NULL;
-		;
+
 	}
 
 	mtimer_RegisterTimer(&cant_timer, CAN_T_TIMER_VAL, CAN_T_TIMER_VAL);

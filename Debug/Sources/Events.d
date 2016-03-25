@@ -28,6 +28,10 @@ Sources/Events.o: ../Sources/Events.c \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BlueLED.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Inhr1.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Init_Config.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Static_Code/System/PDD_Includes.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Static_Code/PDD/ADC_PDD.h \
@@ -54,7 +58,8 @@ Sources/Events.o: ../Sources/Events.c \
  E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/timer_timeout/timer_timeout.h \
  E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/can_t/can_t.h \
  E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/queue/queue.h \
- ../Sources/vmain.h
+ ../Sources/vmain.h \
+ E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/terminal/terminal.h
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Cpu.h:
 
@@ -114,6 +119,14 @@ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h:
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h:
 
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Inhr1.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h:
+
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Init_Config.h:
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Static_Code/System/PDD_Includes.h:
@@ -167,3 +180,5 @@ E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/can_t/can_t.h:
 E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/queue/queue.h:
 
 ../Sources/vmain.h:
+
+E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules/terminal/terminal.h:

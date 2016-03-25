@@ -30,6 +30,10 @@ Generated_Code/CAN1.o: ../Generated_Code/CAN1.c ../Generated_Code/CAN1.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BlueLED.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Inhr1.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h \
+ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Static_Code/PDD/MSCAN_PDD.h
 
 ../Generated_Code/CAN1.h:
@@ -99,5 +103,13 @@ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BlueLED.h:
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h:
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/BitIoLdd2.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/DbgTerminal.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/Inhr1.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Generated_Code/ASerialLdd1.h:
 
 E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Static_Code/PDD/MSCAN_PDD.h:

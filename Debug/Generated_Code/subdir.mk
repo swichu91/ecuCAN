@@ -4,34 +4,43 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Generated_Code/ASerialLdd1.c \
 ../Generated_Code/BitIoLdd1.c \
 ../Generated_Code/BitIoLdd2.c \
 ../Generated_Code/BlueLED.c \
 ../Generated_Code/CAN1.c \
 ../Generated_Code/Cpu.c \
+../Generated_Code/DbgTerminal.c \
 ../Generated_Code/GreenLED.c \
+../Generated_Code/Inhr1.c \
 ../Generated_Code/PE_LDD.c \
 ../Generated_Code/Pins1.c \
 ../Generated_Code/TU1.c 
 
 OBJS += \
+./Generated_Code/ASerialLdd1.o \
 ./Generated_Code/BitIoLdd1.o \
 ./Generated_Code/BitIoLdd2.o \
 ./Generated_Code/BlueLED.o \
 ./Generated_Code/CAN1.o \
 ./Generated_Code/Cpu.o \
+./Generated_Code/DbgTerminal.o \
 ./Generated_Code/GreenLED.o \
+./Generated_Code/Inhr1.o \
 ./Generated_Code/PE_LDD.o \
 ./Generated_Code/Pins1.o \
 ./Generated_Code/TU1.o 
 
 C_DEPS += \
+./Generated_Code/ASerialLdd1.d \
 ./Generated_Code/BitIoLdd1.d \
 ./Generated_Code/BitIoLdd2.d \
 ./Generated_Code/BlueLED.d \
 ./Generated_Code/CAN1.d \
 ./Generated_Code/Cpu.d \
+./Generated_Code/DbgTerminal.d \
 ./Generated_Code/GreenLED.d \
+./Generated_Code/Inhr1.d \
 ./Generated_Code/PE_LDD.d \
 ./Generated_Code/Pins1.d \
 ./Generated_Code/TU1.d 

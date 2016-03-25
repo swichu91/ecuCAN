@@ -14,7 +14,8 @@ Generated_Code/PE_LDD.o: ../Generated_Code/PE_LDD.c \
  ../Generated_Code/TU1.h \
  E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Static_Code/PDD/SysTick_PDD.h \
  ../Generated_Code/CAN1.h ../Generated_Code/BlueLED.h \
- ../Generated_Code/BitIoLdd2.h
+ ../Generated_Code/BitIoLdd2.h ../Generated_Code/DbgTerminal.h \
+ ../Generated_Code/Inhr1.h ../Generated_Code/ASerialLdd1.h
 
 ../Generated_Code/PE_LDD.h:
 
@@ -57,3 +58,9 @@ E:/PROGRAMOWANIE/KDS_DEV/CAN_FreeRTOS/Static_Code/PDD/SysTick_PDD.h:
 ../Generated_Code/BlueLED.h:
 
 ../Generated_Code/BitIoLdd2.h:
+
+../Generated_Code/DbgTerminal.h:
+
+../Generated_Code/Inhr1.h:
+
+../Generated_Code/ASerialLdd1.h:

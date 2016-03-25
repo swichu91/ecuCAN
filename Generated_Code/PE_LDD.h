@@ -6,7 +6,7 @@
 **     Version     : Component 01.011, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-03-25, 16:21, # CodeGen: 19
+**     Date/Time   : 2016-03-25, 18:57, # CodeGen: 25
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -62,6 +62,9 @@
 #include "CAN1.h"
 #include "BlueLED.h"
 #include "BitIoLdd2.h"
+#include "DbgTerminal.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 
 
 /*

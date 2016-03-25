@@ -37,6 +37,9 @@
 #include "CAN1.h"
 #include "BlueLED.h"
 #include "BitIoLdd2.h"
+#include "DbgTerminal.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"

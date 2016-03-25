@@ -102,11 +102,11 @@
 			</tr>
 			<tr>
 				<td>16</td><td>PTI1/IRQ/UART2_TX</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOC</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#5FE356'>UART2</td><td bgcolor='#5FE356'>uart_tx</td><td bgcolor='#5FE356'>alt3</td><td bgcolor='#5FE356'>Output</td>
 			</tr>
 			<tr>
 				<td>17</td><td>PTI0/IRQ/UART2_RX</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOC</td><td bgcolor='#F7DCFF'>port0</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#5FE356'>UART2</td><td bgcolor='#5FE356'>uart_rx</td><td bgcolor='#5FE356'>alt3</td><td bgcolor='#5FE356'>Input</td>
 			</tr>
 			<tr>
 				<td>18</td><td>PTH1/KBI1_P25/FTM2_CH1</td><td><small><i>same</i></small></td>
@@ -1284,11 +1284,11 @@
 			</tr>
 			<tr>
 				<td>16</td><td>PTI1/IRQ/UART2_TX</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOC</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#5FE356'>UART2</td><td bgcolor='#5FE356'>uart_tx</td><td bgcolor='#5FE356'>alt3</td><td bgcolor='#5FE356'>Output</td>
 			</tr>
 			<tr>
 				<td>17</td><td>PTI0/IRQ/UART2_RX</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOC</td><td bgcolor='#F7DCFF'>port0</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#5FE356'>UART2</td><td bgcolor='#5FE356'>uart_rx</td><td bgcolor='#5FE356'>alt3</td><td bgcolor='#5FE356'>Input</td>
 			</tr>
 			<tr>
 				<td>18</td><td>PTH1/KBI1_P25/FTM2_CH1</td><td><small><i>same</i></small></td>

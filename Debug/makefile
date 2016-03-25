@@ -9,6 +9,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include modules/timer_timeout/subdir.mk
+-include modules/terminal/subdir.mk
 -include modules/queue/subdir.mk
 -include modules/can_t/subdir.mk
 -include Static_Code/System/subdir.mk
