@@ -1,0 +1,4 @@
+/* INFOS section, author Jorge Alvarez */
+-esym(714, TIMER_TIMEOUT_*)
+-esym(759, TIMER_TIMEOUT_*)
+-esym(765, TIMER_TIMEOUT_*)

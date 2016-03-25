@@ -1,0 +1,206 @@
+/**
+ * \file timer_timeout.c
+ * \brief
+ * \note
+ * \author JorgeAlvarez
+ * \copyright Impact Clean Power Technology 2015
+ * \version Template ICPT-C-Eclipse-Template-v1
+ */
+
+
+
+/* INCLUDE FILES */
+
+#include "timer_timeout.h"
+
+
+
+/* CONFIGURATION */
+
+
+
+/* DEFINES */
+
+
+
+/* CONSTANTS */
+
+
+
+/* DATA TYPES */
+
+
+
+/* LOCAL VARIABLES */
+
+
+
+/* GLOBAL VARIABLES */
+
+
+
+/* LOCAL MACROS */
+
+
+
+/* LOCAL FUNCTIONS PROTOTYPES */
+
+
+
+/* GLOBAL FUNCTIONS */
+
+uint32_t TIMER_TIMEOUT_getPreset(TIMER_TIMEOUT_T const * const tt)
+{
+
+    return tt->Preset;
+
+}
+
+
+uint32_t TIMER_TIMEOUT_getTimer(TIMER_TIMEOUT_T const * const tt)
+{
+
+    return tt->Timer;
+
+}
+
+
+uint8_t TIMER_TIMEOUT_isTimeout(TIMER_TIMEOUT_T const * const tt)
+{
+
+    return tt->Timeout;
+
+}
+
+
+uint8_t TIMER_TIMEOUT_isActivated(TIMER_TIMEOUT_T const * const tt)
+{
+
+    return tt->Activated;
+
+}
+
+
+uint8_t TIMER_TIMEOUT_isEnabled(TIMER_TIMEOUT_T const * const tt)
+{
+
+    return tt->Enabled;
+
+}
+
+
+void TIMER_TIMEOUT_setPreset(TIMER_TIMEOUT_T * const tt, uint32_t const preset)
+{
+
+    tt->Preset = preset;
+
+}
+
+
+void TIMER_TIMEOUT_reload(TIMER_TIMEOUT_T * const tt)
+{
+
+    tt->Timer = tt->Preset;
+    tt->Activated = 1u;
+
+}
+
+/* XXX G.K. CodeReview 102: seems TIMER_TIMEOUT_tick(t) is special case of   TIMER_TIMEOUT_tickTime(t,1) potential to refactoring */
+uint8_t TIMER_TIMEOUT_tick(TIMER_TIMEOUT_T * const tt)
+{
+
+    if (tt->Enabled == 0u)
+    {
+        /* */
+    }
+    else
+    {
+        if (tt->Timer > 1u)
+        {
+            (tt->Timer) --;
+        }
+        else
+        {
+            tt->Timer = 0u;
+            tt->Timeout = 1u;
+        }
+    }
+
+    return tt->Timeout;
+
+}
+
+
+uint8_t TIMER_TIMEOUT_tickTime(TIMER_TIMEOUT_T * const tt, uint32_t const tickTime)
+{
+
+    if (tt->Enabled == 0u)
+    {
+        /* */
+    }
+    else
+    {
+        if (tt->Timer > tickTime)
+        {
+            (tt->Timer) -= tickTime;
+        }
+        else
+        {
+            tt->Timer = 0u;
+            tt->Timeout = 1u;
+        }
+    }
+
+    return tt->Timeout;
+
+}
+
+
+void TIMER_TIMEOUT_start(TIMER_TIMEOUT_T * const tt)
+{
+
+    tt->Enabled = 1u;
+
+}
+
+
+void TIMER_TIMEOUT_stop(TIMER_TIMEOUT_T * const tt)
+{
+
+    tt->Enabled = 0u;
+    tt->Timer = tt->Preset;
+
+}
+
+
+void TIMER_TIMEOUT_reset(TIMER_TIMEOUT_T * const tt)
+{
+
+    tt->Timeout = 0u;
+
+}
+
+
+void TIMER_TIMEOUT_pause(TIMER_TIMEOUT_T * const tt)
+{
+
+    tt->Enabled = 0u;
+
+}
+
+
+void TIMER_TIMEOUT_init(TIMER_TIMEOUT_T * const tt, uint32_t const timer, uint32_t const preset)
+{
+
+    tt->Activated = 0u;
+    tt->Enabled = 0u;
+    tt->Timeout = 0u;
+    tt->Preset = preset;
+    tt->Timer = timer;
+
+}
+
+
+
+/* LOCAL FUNCTIONS */
+

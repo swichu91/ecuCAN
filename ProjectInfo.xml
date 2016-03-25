@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+  Copyright : 2012 Freescale, Inc. All Rights Reserved.
+
+  This configuration file is a standard interchange file that's format is maintained
+  by Freescale, Inc. The configuration file is a derivative work
+  of the Processor Expert Software technology licensed for use by customers
+  as defined as SOFTWARE in the product's End User License Agreement. This file
+  and format are free to use and distribute for read-only purposes. You do not have
+  the right to create these files or modify this format or use for any purposes other
+  than interchange with the Processor Expert Software technology.
+
+  THIS SOFTWARE IS PROVIDED "AS IS".
+
+  NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT
+  LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+  PURPOSE APPLY TO THIS SOFTWARE. IN NO EVENT WILL FREESCALE BE LIABLE, WHETHER
+  IN CONTRACT, TORT, OR OTHERWISE, FOR ANY INCIDENTAL, SPECIAL, INDIRECT,
+  CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR
+  ANY LOSS OF USE, LOSS OF TIME, INCONVENIENCE, COMMERCIAL LOSS, OR LOST PROFITS,
+  SAVINGS, OR REVENUES TO THE FULL EXTENT SUCH MAY BE DISCLAIMED BY LAW.
+
+-->
+<export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ProjectInfoDescription.xsd">
+  <PROCESSOR>
+    <DeviceID>MKE06Z128xxx4</DeviceID>
+    <CoreNum>1</CoreNum>
+    <Cores>
+      <Core>
+        <CoreSet>Cortex-M0+</CoreSet>
+      </Core>
+    </Cores>
+    <SRAMsize>16k</SRAMsize>
+    <FLASHsize>128k</FLASHsize>
+  </PROCESSOR>
+  <PATHS>
+    <LinkerCommandFile>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
+    <IncludePaths>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\IO_Map\</Path>
+      <Path>C:\Freescale\KDS_v3\eclipse\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Sources\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\</Path>
+    </IncludePaths>
+    <SourceCodePaths>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Project_Settings\Startup_Code\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Sources\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\can_t\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\timer_timeout\</Path>
+    </SourceCodePaths>
+  </PATHS>
+  <FILES>
+    <GeneratedCs>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd1.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd2.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BlueLED.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\CAN1.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Cpu.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\GreenLED.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_LDD.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Pins1.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\TU1.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Project_Settings\Startup_Code\startup.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Sources\Events.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Sources\main.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Sources\vmain.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\CPU_Init.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\Peripherals_Init.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\Vectors.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\can_t\can_t.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\fifo.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\queue.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\timer_timeout\timer_timeout.c</PathName>
+    </GeneratedCs>
+    <GeneratedHs>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd1.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BitIoLdd2.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\BlueLED.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\CAN1.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\CPU_Config.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Cpu.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\GreenLED.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\IO_Map.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Init_Config.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_Const.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_Error.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_LDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\PE_Types.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Pins1.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\TU1.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Generated_Code\Vectors_Config.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Sources\Events.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Sources\vmain.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\IO_Map\MKE06Z4.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\ADC_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\CMP_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\CRC_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\FTMRE_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\FTM_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\GPIO_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\I2C_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\IRQ_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\KBI_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\MCM_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\MSCAN_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\NVIC_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\PDD_Types.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\PIT_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\PMC_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\PORT_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\PWT_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\RTC0_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\SCB_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\SIM_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\SPI_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\SysTick_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\UART_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\PDD\WDOG_PDD.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\CPU_Init.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\PDD_Includes.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\Static_Code\System\Peripherals_Init.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\can_t\can_t.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\fifo.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\queue\queue.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\CAN_FreeRTOS\modules\timer_timeout\timer_timeout.h</PathName>
+    </GeneratedHs>
+  </FILES>
+  <OPTIONS>
+  </OPTIONS>
+</export>
