@@ -15,7 +15,7 @@
 
 QueueRecord_t* can_rx_queue;
 static QueueRecord_t* can_tx_queue;
-static foo_t function_list[CAN_T_MAX_NR_REGISTERED_FUNCTIONS];
+static foo_t *function_list[CAN_T_MAX_NR_REGISTERED_FUNCTIONS];
 
 mtimer_t cant_timer;
 
@@ -29,9 +29,11 @@ void CANt_init(void) {
 	uint8_t i;
 
 	for (i = 0; i < CAN_T_MAX_NR_REGISTERED_FUNCTIONS; i++) {
-		function_list[i].do_work = NULL;
-		function_list[i].id = 0xFFFF;
-		function_list[i].dptr = NULL;
+
+		function_list[i]=malloc(sizeof(foo_t));
+		function_list[i]->do_work = NULL;
+		function_list[i]->id = 0xFFFF;
+		function_list[i]->dptr = NULL;
 
 	}
 
@@ -67,8 +69,8 @@ void CANt_ParseFrame(uint8_t* data, size_t dlen, uint32_t id) {
 	for (i = 0; i < CAN_T_MAX_NR_REGISTERED_FUNCTIONS; i++) // first match lookup
 			{
 
-		if (function_list[i].id == id) {
-			function_list[i].do_work(data, dlen, id, function_list[i].dptr);
+		if (function_list[i]->id == id) {
+			function_list[i]->do_work(data, dlen, id, function_list[i]->dptr);
 		}
 	}
 
@@ -81,12 +83,12 @@ void CANt_RegisterCallback(
 
 	for (i = 0; i < CAN_T_MAX_NR_REGISTERED_FUNCTIONS; i++) // first free lookup
 			{
-		if ((function_list[i].do_work == NULL)
-				&& (function_list[i].id == 0xFFFF)) {
+		if ((function_list[i]->do_work == NULL)
+				&& (function_list[i]->id == 0xFFFF)) {
 
-			function_list[i].dptr = dptr;
-			function_list[i].id = id;
-			function_list[i].do_work = foo;
+			function_list[i]->dptr = dptr;
+			function_list[i]->id = id;
+			function_list[i]->do_work = foo;
 			return;
 		}
 	}
