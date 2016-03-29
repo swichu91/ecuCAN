@@ -64,6 +64,10 @@ Module "DbgTerminal" (component Term)
                 for fractional part.     - negative numbers: 8 digits for integer part with 4 digits for fractional part.
    - DbgTerminal_SendChar -Send char to terminal.
    - DbgTerminal_Cls -Clear the terminal window.
+   - DbgTerminal_CursorUp -Move cursor up.
+   - DbgTerminal_CursorDown -Move cursor down.
+   - DbgTerminal_CursorLeft -Move cursor left.
+   - DbgTerminal_CursorRight -Move cursor right.
    - DbgTerminal_MoveTo -Move cursor to position x, y. Range of coordinates can be from 1 to the size, which depends on the 
                 used terminal. Position [1,1] represents the upper left corner.
    - DbgTerminal_SetColor -Set foreground and background color. The following color constant are defined in the header file:   

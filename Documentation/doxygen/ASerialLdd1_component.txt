@@ -544,7 +544,7 @@ registers of the peripheral(s) configured by the component.
 **            Event mask                                   : 
 **              OnBlockSent                                : Enabled
 **              OnBlockReceived                            : Enabled
-**              OnTxComplete                               : Enabled
+**              OnTxComplete                               : Disabled
 **              OnError                                    : Enabled
 **              OnBreak                                    : Enabled
 **          CPU clock/configuration selection              : 

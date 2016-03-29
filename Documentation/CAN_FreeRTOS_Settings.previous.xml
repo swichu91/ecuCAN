@@ -444,8 +444,8 @@
             <Interrupt_TxD_priority v="medium priority" />
             <Interrupt_Error v="INT_UART2" />
             <Interrupt_Error_priority v="medium priority" />
-            <Input_buffer_size v="1024" />
-            <Output_buffer_size v="1024" />
+            <Input_buffer_size v="16" />
+            <Output_buffer_size v="16" />
             <group name="Handshake">
               <boolgroup name="CTS" v="Disabled" />
               <boolgroup name="RTS" v="Disabled" />
@@ -523,7 +523,7 @@
                   <group name="Event mask">
                     <OnBlockSent v="Enabled" />
                     <OnBlockReceived v="Enabled" />
-                    <OnTxComplete v="Enabled" />
+                    <OnTxComplete v="Disabled" />
                     <OnError v="Enabled" />
                     <OnBreak v="Enabled" />
                   </group>
@@ -581,9 +581,7 @@
                 <event name="OnError" v="generate code">
                   <Event_procedure_name v="ASerialLdd1_OnError" />
                 </event>
-                <event name="OnTxComplete" v="generate code">
-                  <Event_procedure_name v="ASerialLdd1_OnTxComplete" />
-                </event>
+                <event name="OnTxComplete" v="don&amp;apos;t generate code" />
               </Events>
             </inhrbean>
           </group>
@@ -631,10 +629,7 @@
           <event name="OnFullRxBuf" v="don&amp;apos;t generate code" />
           <event name="OnFreeTxBuf" v="don&amp;apos;t generate code" />
           <event name="OnBreak" v="don&amp;apos;t generate code" />
-          <event name="OnTxComplete" v="generate code">
-            <Event_procedure_name v="Inhr1_OnTxComplete" />
-            <Priority v="interrupts enabled" />
-          </event>
+          <event name="OnTxComplete" v="don&amp;apos;t generate code" />
         </Events>
       </inhrbean>
       <group name="CPU clock/speed selection">

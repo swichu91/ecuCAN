@@ -523,7 +523,7 @@
                   <group name="Event mask">
                     <OnBlockSent v="Enabled" />
                     <OnBlockReceived v="Enabled" />
-                    <OnTxComplete v="Enabled" />
+                    <OnTxComplete v="Disabled" />
                     <OnError v="Enabled" />
                     <OnBreak v="Enabled" />
                   </group>
@@ -581,9 +581,7 @@
                 <event name="OnError" v="generate code">
                   <Event_procedure_name v="ASerialLdd1_OnError" />
                 </event>
-                <event name="OnTxComplete" v="generate code">
-                  <Event_procedure_name v="ASerialLdd1_OnTxComplete" />
-                </event>
+                <event name="OnTxComplete" v="don&amp;apos;t generate code" />
               </Events>
             </inhrbean>
           </group>
@@ -624,17 +622,11 @@
             <Priority v="interrupts disabled" />
           </event>
           <event name="OnRxCharExt" v="don&amp;apos;t generate code" />
-          <event name="OnTxChar" v="generate code">
-            <Event_procedure_name v="Inhr1_OnTxChar" />
-            <Priority v="interrupts disabled" />
-          </event>
+          <event name="OnTxChar" v="don&amp;apos;t generate code" />
           <event name="OnFullRxBuf" v="don&amp;apos;t generate code" />
           <event name="OnFreeTxBuf" v="don&amp;apos;t generate code" />
           <event name="OnBreak" v="don&amp;apos;t generate code" />
-          <event name="OnTxComplete" v="generate code">
-            <Event_procedure_name v="Inhr1_OnTxComplete" />
-            <Priority v="interrupts enabled" />
-          </event>
+          <event name="OnTxComplete" v="don&amp;apos;t generate code" />
         </Events>
       </inhrbean>
       <group name="CPU clock/speed selection">
@@ -650,10 +642,10 @@
       <SendFloatNum v="generate code" />
       <SendChar v="generate code" />
       <Cls v="generate code" />
-      <CursorUp v="don&amp;apos;t generate code" />
-      <CursorDown v="don&amp;apos;t generate code" />
-      <CursorLeft v="don&amp;apos;t generate code" />
-      <CursorRight v="don&amp;apos;t generate code" />
+      <CursorUp v="generate code" />
+      <CursorDown v="generate code" />
+      <CursorLeft v="generate code" />
+      <CursorRight v="generate code" />
       <MoveTo v="generate code" />
       <SetColor v="generate code" />
       <EraseLine v="generate code" />

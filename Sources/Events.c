@@ -211,42 +211,6 @@ void Inhr1_OnRxChar(void) {
 
 }
 
-/*
- ** ===================================================================
- **     Event       :  Inhr1_OnTxChar (module Events)
- **
- **     Component   :  Inhr1 [AsynchroSerial]
- **     Description :
- **         This event is called after a character is transmitted.
- **     Parameters  : None
- **     Returns     : Nothing
- ** ===================================================================
- */
-void Inhr1_OnTxChar(void) {
-	/* Write your code here ... */
-}
-
-/*
- ** ===================================================================
- **     Event       :  Inhr1_OnTxComplete (module Events)
- **
- **     Component   :  Inhr1 [AsynchroSerial]
- **     Description :
- **         This event indicates that the transmitter is finished
- **         transmitting all data, preamble, and break characters and is
- **         idle. It can be used to determine when it is safe to switch
- **         a line driver (e.g. in RS-485 applications).
- **         The event is available only when both <Interrupt
- **         service/event> and <Transmitter> properties are enabled.
- **     Parameters  : None
- **     Returns     : Nothing
- ** ===================================================================
- */
-void Inhr1_OnTxComplete(void) {
-	/* Write your code here ... */
-	char dummy;
-}
-
 /* END Events */
 
 #ifdef __cplusplus

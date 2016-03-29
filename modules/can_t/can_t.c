@@ -74,7 +74,7 @@ void CANt_ParseFrame(uint8_t* data, size_t dlen, uint32_t id) {
 
 }
 
-void CANt_RegisterFoo(
+void CANt_RegisterCallback(
 		uint8_t (*foo)(uint8_t* data, size_t dlen, uint32_t id, void* dptr),
 		uint32_t id, void* dptr) {
 	uint8_t i;

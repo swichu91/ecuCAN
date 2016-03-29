@@ -7,7 +7,7 @@
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-03-25, 19:48, # CodeGen: 32
+**     Date/Time   : 2016-03-26, 09:09, # CodeGen: 34
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -358,19 +358,6 @@ void ASerialLdd1_OnBlockSent(LDD_TUserData *UserDataPtr);
 ** ===================================================================
 */
 void ASerialLdd1_OnError(LDD_TUserData *UserDataPtr);
-
-/*
-** ===================================================================
-**     Method      :  Inhr1_ASerialLdd1_OnTxComplete (component AsynchroSerial)
-**
-**     Description :
-**         This event indicates that the transmitter is finished 
-**         transmitting all data, preamble, and break characters and is 
-**         idle.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void ASerialLdd1_OnTxComplete(LDD_TUserData *UserDataPtr);
 
 /*
 ** ===================================================================

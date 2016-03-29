@@ -191,19 +191,6 @@ void Inhr1_OnRxChar(void);
 
 /*
 ** ===================================================================
-**     Event       :  Inhr1_OnTxChar (module Events)
-**
-**     Component   :  Inhr1 [AsynchroSerial]
-**     Description :
-**         This event is called after a character is transmitted.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void Inhr1_OnTxChar(void);
-
-/*
-** ===================================================================
 **     Event       :  Inhr1_OnTxComplete (module Events)
 **
 **     Component   :  Inhr1 [AsynchroSerial]

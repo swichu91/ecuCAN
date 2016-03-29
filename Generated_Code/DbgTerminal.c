@@ -7,7 +7,7 @@
 **     Version     : Component 02.061, Driver 03.22, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-03-25, 19:25, # CodeGen: 31
+**     Date/Time   : 2016-03-26, 09:11, # CodeGen: 35
 **     Abstract    :
 **This components generates low-level console IO routines for selected UART.
 **     Settings    :
@@ -24,6 +24,10 @@
 **         SendFloatNum - byte DbgTerminal_SendFloatNum(TPE_Float number);
 **         SendChar     - void DbgTerminal_SendChar(char_t Val);
 **         Cls          - void DbgTerminal_Cls(void);
+**         CursorUp     - void DbgTerminal_CursorUp(uint8_t lines);
+**         CursorDown   - void DbgTerminal_CursorDown(uint8_t lines);
+**         CursorLeft   - void DbgTerminal_CursorLeft(uint8_t columns);
+**         CursorRight  - void DbgTerminal_CursorRight(uint8_t columns);
 **         MoveTo       - void DbgTerminal_MoveTo(uint8_t x, uint8_t y);
 **         SetColor     - void DbgTerminal_SetColor(uint8_t foreground, uint8_t background);
 **         EraseLine    - void DbgTerminal_EraseLine(void);
@@ -390,6 +394,80 @@ void DbgTerminal_Cls(void)
   SendESCPrefix();
   while (Inhr1_SendChar(0x32U) == ERR_TXFULL){} /* Send the part of the escape sequence ('2') */
   while (Inhr1_SendChar(0x4AU) == ERR_TXFULL){} /* Send the part of the escape sequence ('J') */
+}
+
+/*
+** ===================================================================
+**     Method      :  DbgTerminal_CursorUp (component Term)
+**     Description :
+**         Move cursor up.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**         lines           - Number of rows for shift cursor up.
+**     Returns     : Nothing
+** ===================================================================
+*/
+void DbgTerminal_CursorUp(uint8_t lines)
+{
+  SendESCPrefix();                     /* Send the escape prefix */
+  DbgTerminal_SendNum((int32_t) lines); /* Send number of lines */
+  while (Inhr1_SendChar(0x41U) == ERR_TXFULL){} /* Send the part of the escape sequence ('A') */
+}
+
+/*
+** ===================================================================
+**     Method      :  DbgTerminal_CursorDown (component Term)
+**     Description :
+**         Move cursor down.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**         lines           - Number of rows for shift cursor down..
+**     Returns     : Nothing
+** ===================================================================
+*/
+void DbgTerminal_CursorDown(uint8_t lines)
+{
+  SendESCPrefix();                     /* Send the escape prefix */
+  DbgTerminal_SendNum((int32_t) lines); /* Send number of lines */
+  while (Inhr1_SendChar(0x42U) == ERR_TXFULL){} /* Send the part of the escape sequence ('B') */
+}
+
+/*
+** ===================================================================
+**     Method      :  DbgTerminal_CursorLeft (component Term)
+**     Description :
+**         Move cursor left.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**         columns         - Number of columns for shift cursor
+**                           left
+**     Returns     : Nothing
+** ===================================================================
+*/
+void DbgTerminal_CursorLeft(uint8_t columns)
+{
+  SendESCPrefix();                     /* Send the escape prefix */
+  DbgTerminal_SendNum((int32_t) columns); /* Send number of columns */
+  while (Inhr1_SendChar(0x44U) == ERR_TXFULL){} /* Send the part of the escape sequence ('D') */
+}
+
+/*
+** ===================================================================
+**     Method      :  DbgTerminal_CursorRight (component Term)
+**     Description :
+**         Move cursor right.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**         columns         - Number of columns for shift cursor
+**                           right
+**     Returns     : Nothing
+** ===================================================================
+*/
+void DbgTerminal_CursorRight(uint8_t columns)
+{
+  SendESCPrefix();                     /* Send the escape prefix */
+  DbgTerminal_SendNum((int32_t) columns); /* Send number of columns */
+  while (Inhr1_SendChar(0x43U) == ERR_TXFULL){} /* Send the part of the escape sequence ('C') */
 }
 
 /*

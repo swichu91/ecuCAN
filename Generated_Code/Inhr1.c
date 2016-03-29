@@ -7,7 +7,7 @@
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-03-25, 19:48, # CodeGen: 32
+**     Date/Time   : 2016-03-26, 09:11, # CodeGen: 35
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -460,12 +460,7 @@ void ASerialLdd1_OnBlockReceived(LDD_TUserData *UserDataPtr)
 */
 void ASerialLdd1_OnBlockSent(LDD_TUserData *UserDataPtr)
 {
-  word OnFlags = 0x00U;                /* Temporary variable for flags */
-
   (void)UserDataPtr;                   /* Parameter is not used, suppress unused argument warning */
-  if ((SerFlag & RUNINT_FROM_TX) != 0U) { /* Is flag "running int from TX" set? */
-    OnFlags |= ON_TX_CHAR;             /* Set flag "OnTxChar" */
-  }
   OutIndexR++;
   if (OutIndexR >= Inhr1_OUT_BUF_SIZE) { /* Is the index out of the transmit buffer? */
     OutIndexR = 0x00U;                 /* Set index on the first item into the transmit buffer */
@@ -476,9 +471,6 @@ void ASerialLdd1_OnBlockSent(LDD_TUserData *UserDataPtr)
     (void)ASerialLdd1_SendBlock(ASerialLdd1_DeviceDataPtr, (LDD_TData *)&OutBuffer[OutIndexR], 1U); /* Send one data byte */
   } else {
     SerFlag &= (byte)~(RUNINT_FROM_TX); /* Clear "running int from TX" and "full TX buff" flags */
-  }
-  if ((OnFlags & ON_TX_CHAR) != 0x00U) { /* Is flag "OnTxChar" set? */
-    Inhr1_OnTxChar();                  /* If yes then invoke user event */
   }
 }
 
@@ -504,23 +496,6 @@ void ASerialLdd1_OnError(LDD_TUserData *UserDataPtr)
     SerFlag |= (((SerialErrorMask & LDD_SERIAL_RX_OVERRUN) != 0U ) ? OVERRUN_ERR : 0U);
     SerFlag |= (((SerialErrorMask & LDD_SERIAL_FRAMING_ERROR) != 0U ) ? FRAMING_ERR : 0U);
   }
-}
-
-/*
-** ===================================================================
-**     Method      :  Inhr1_ASerialLdd1_OnTxComplete (component AsynchroSerial)
-**
-**     Description :
-**         This event indicates that the transmitter is finished 
-**         transmitting all data, preamble, and break characters and is 
-**         idle.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void ASerialLdd1_OnTxComplete(LDD_TUserData *UserDataPtr)
-{
-  (void)UserDataPtr;                   /* Parameter is not used, suppress unused argument warning */
-  Inhr1_OnTxComplete();                /* Invoke user event */
 }
 
 /*

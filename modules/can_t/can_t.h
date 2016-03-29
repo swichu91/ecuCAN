@@ -32,7 +32,7 @@ void CANt_RunPeriodic(void);
 void CANt_send_string(LDD_CAN_TMessageID id,LDD_CAN_TFrameType type,char* s);
 void CANt_send(LDD_CAN_TFrame* msg);
 void CANt_sendp(LDD_CAN_TMessageID id, LDD_CAN_TFrameType type, uint8_t* data,size_t len) ;
-void CANt_RegisterFoo(uint8_t (*foo)(uint8_t* data,size_t dlen, uint32_t id,void* dptr),uint32_t id, void* dptr);
+void CANt_RegisterCallback(uint8_t (*foo)(uint8_t* data,size_t dlen, uint32_t id,void* dptr),uint32_t id, void* dptr);
 void CANt_ParseFrame(uint8_t* data, size_t dlen, uint32_t id);
 
 

@@ -36,8 +36,8 @@ void vmain(void) {
 	mtimer_RegisterTimer(&gen_timer, 1000, 1000);
 	mtimer_start(&gen_timer);
 
-	CANt_RegisterFoo(test_foo,0x44,NULL);
-	CANt_RegisterFoo(test_foo2,0x45,NULL);
+	CANt_RegisterCallback(test_foo,0x44,NULL);
+	CANt_RegisterCallback(test_foo2,0x45,NULL);
 
 	for (;;) {
 
