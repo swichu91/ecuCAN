@@ -26,6 +26,7 @@ S_UPPER_DEPS :=
 SUBDIRS := \
 modules/timer_timeout \
 modules/terminal \
+modules/shell \
 modules/queue \
 modules/can_t \
 Static_Code/System \

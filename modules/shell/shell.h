@@ -9,6 +9,14 @@
 #define MODULES_SHELL_SHELL_H_
 
 #include "shell_conf.h"
+#include <stdint.h>
+
+typedef struct _shell_conf
+{
+
+
+}shell_conf;
+
 
 typedef struct _cmd_entry
 {
@@ -19,6 +27,16 @@ typedef struct _cmd_entry
 
 }cmd_entry;
 
+void foo_test(char **arg_tab, uint8_t arg_cnt)
+{
+
+}
+
+
+cmd_entry cmd_tab[SHELL_MAX_NR_REGISTERED_COMMANDS]=
+{
+		{foo_test,NULL,NULL,"test"}
+};
 
 
 #endif /* MODULES_SHELL_SHELL_H_ */
