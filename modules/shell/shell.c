@@ -9,77 +9,114 @@
 #include "shell_conf.h"
 #include <stdint.h>
 #include <string.h>
+#include <stdlib.h>
 
-typedef struct _shell {
 
-	void* hist_queue;
 
-	char* line_buff;
-	uint32_t line_buff_pos;
-	size_t line_buff_size;
+sherr_t shell_Init(shell_t* shell, size_t linebuf_len) {
 
-	cmd_entry *cmd_etab[SHELL_MAX_NR_REGISTERED_COMMANDS];
+	SHELL_ASSERT(shell != NULL);
 
-	uint8_t (*shell_write)(char* str);
-	uint8_t (*shell_read)(char* str_out);
-	uint8_t (*shell_cup)(void);
-	uint8_t (*shell_cdown)(void);
-	uint8_t (*shell_cleft)(void);
-	uint8_t (*shell_cright)(void);
-	uint8_t (*shell_enter)(void);
-	uint8_t (*shell_bs)(void);
+	memset(shell, 0, sizeof(*shell));
 
-} shell_t;
+	if ((shell->line_buff = malloc(linebuf_len)) == NULL) {
+		return SHELL_ERR_MEM;
+	}
+	shell->line_buff_size = linebuf_len;
 
-typedef enum
-{
-	LINE_BUFF_OK =0,
-	LINE_BUFF_FULL =1,
-}lbuff_e;
+	return SHELL_OK;
 
-void shell_RegisterFunctions(shell_t* shell, uint8_t (*shell_write)(char* str),
+}
 
-		uint8_t (*shell_read)(char* str_out), uint8_t (*shell_cup)(void),
-		uint8_t (*shell_cdown)(void), uint8_t (*shell_cleft)(void),
-		uint8_t (*shell_cright)(void), uint8_t (*shell_enter)(void),
-		uint8_t (*shell_bs)(void)) {
-	//assert for each foo pointer
+void shell_RegisterFunctions(shell_t* shell,
+		uint8_t (*shell_write)(char* str, size_t len),
+		uint8_t (*shell_read)(char* str_out)) {
+
+	SHELL_ASSERT(shell != NULL);
+	SHELL_ASSERT(shell_write != NULL);
+	SHELL_ASSERT(shell_read != NULL);
 
 	shell->shell_write = shell_write;
 	shell->shell_read = shell_read;
-	shell->shell_enter = shell_enter;
-	shell->shell_cup = shell_cup;
-	shell->shell_cright = shell_cright;
-	shell->shell_cleft = shell_cleft;
-	shell->shell_cdown = shell_cdown;
-	shell->shell_bs = shell_bs;
+
 
 }
 
-void shell_RegisterCmdTab(shell_t* shell, cmd_entry* cmd_tab, size_t ele) {
+void shell_RegisterCmdTab(shell_t* shell, cmd_entry_t* cmd_tab, size_t ele) {
 	uint8_t i;
 
-	//assert if ele > SHELL_MAX_NR_REGISTERED_COMMANDS
+	SHELL_ASSERT(shell != NULL);
+	SHELL_ASSERT(cmd_tab != NULL);
+	SHELL_ASSERT(ele <= SHELL_MAX_NR_REGISTERED_COMMANDS);
 
 	for (i = 0; i < ele; i++) {
 
-		shell[i].cmd_etab[i] = &cmd_tab[i];
+		shell->cmd_etab[i] = &cmd_tab[i];
 
 	}
 }
 
-uint8_t shell_Init(shell_conf* conf) {
+sherr_t shell_AppendCmdTab(shell_t* shell, cmd_entry_t* cmd_tab, size_t ele) {
+
+	SHELL_ASSERT(shell !=NULL);
+	SHELL_ASSERT(cmd_tab !=NULL);
+	uint8_t i = 0;
+	sherr_t ret;
+
+	for (i = 0; i < SHELL_MAX_NR_REGISTERED_COMMANDS; i++) {//look for first empty
+
+		if (shell->cmd_etab[i] == NULL)
+			break;
+
+	}
+
+	if (i == SHELL_MAX_NR_REGISTERED_COMMANDS)	// cmd_tab full
+		ret = SHELL_ERR_TAB_FULL;
+	else if ((SHELL_MAX_NR_REGISTERED_COMMANDS - i) >= ele) {
+		uint8_t j;
+
+		for (j = 0; j < ele; j++, i++) {
+
+			shell->cmd_etab[i] = &cmd_tab[j];
+
+		}
+
+		ret = SHELL_OK;
+	} else { // there is not enough space for append
+		ret = SHELL_ERR_SPACE;
+
+	}
+
+	return ret;
 
 }
 
-static lbuff_e shell_MngtLineBuff(shell_t* shell,char* byte)
-{
-	if(shell->line_buff_pos > shell->line_buff_size){
+uint8_t shell_RegisterCodes(shell_t* shell, char *bs_code, char *newline_code,
+		char *arrowl_code, char *arrowr_code, char *arrowu_code,
+		char *arrowd_code) {
+
+
+	SHELL_ASSERT(shell != NULL);
+
+	shell->bs_code = bs_code;
+	shell->newline_code = newline_code;
+	shell->arrowd_code = arrowd_code;
+	shell->arrowl_code = arrowl_code;
+	shell->arrowr_code = arrowr_code;
+	shell->arrowu_code = arrowu_code;
+
+}
+
+typedef enum {
+	LINE_BUFF_OK = 0, LINE_BUFF_FULL = 1,
+} lbuff_e;
+
+static lbuff_e shell_MngtLineBuff(shell_t* shell, char* byte) {
+	if (shell->line_buff_pos > shell->line_buff_size) {
 		shell->line_buff_pos = 0;
+		memset(shell->line_buff, 0, shell->line_buff_size);	// clear character buffer
 		return LINE_BUFF_FULL;
-	}
-	else
-	{
+	} else {
 		shell->line_buff[shell->line_buff_pos] = *byte;
 		shell->line_buff_pos++;
 		return LINE_BUFF_OK;
@@ -87,26 +124,45 @@ static lbuff_e shell_MngtLineBuff(shell_t* shell,char* byte)
 
 }
 
-
 void shell_RunPeriodic(shell_t* shell) {
+
+	SHELL_ASSERT(shell != NULL);
 
 	char byte;
 
 	shell->shell_read(&byte);
 
-	if(byte !=NULL)
-	{
-		if(shell_MngtLineBuff(shell,byte) == LINE_BUFF_OK)
-		{
-			//TODO: check for new line,bs , arrows /left/right/up/down
+	if (byte != 0) {
+		if (shell_MngtLineBuff(shell, &byte) == LINE_BUFF_OK) {
 
+			if (*shell->newline_code == byte) {
+				shell->shell_write(shell->newline_code,
+						strlen(shell->newline_code));
+				//save current buffer to history queue then
+			} else if (*shell->bs_code == byte) {
 
-		}
-		else
-		{
+			} else if (*shell->arrowu_code == byte) {
+
+			} else if (*shell->arrowd_code == byte) {
+
+			} else if (*shell->arrowl_code == byte) {
+
+			} else if (*shell->arrowr_code == byte) {
+
+			} else if ((byte >= 0x20) && (byte <= 0x7E)) // all ascii 'human' characters available from standard keyboard
+					{
+				shell->shell_write(&byte,1);
+
+			} else // probably first code for arrow
+			{
+
+			}
+
+		} else {
 			// line buffer full, clear it and then proceed to next line
+			shell->shell_write(shell->newline_code,
+					strlen(shell->newline_code));
 		}
-
 
 	}
 

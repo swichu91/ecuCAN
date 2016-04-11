@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PEproject>
   <Header>
-    <Name>CAN_FreeRTOS</Name>
+    <Name>ecuCAN</Name>
     <SavedBy>Mateusz</SavedBy>
     <ModificationStamp>25</ModificationStamp>
     <Date>2016-03-23</Date>

@@ -4,13 +4,13 @@
 /*##                                   */
 /*##     Filename  : ProcessorExpert.ld */
 /*##                                   */
-/*##     Project   : CAN_FreeRTOS      */
+/*##     Project   : ecuCAN            */
 /*##                                   */
 /*##     Processor : MKE06Z128VLK4     */
 /*##                                   */
 /*##     Compiler  : GNU C Compiler    */
 /*##                                   */
-/*##     Date/Time : 2016-03-23, 23:33, # CodeGen: 0 */
+/*##     Date/Time : 2016-04-06, 19:14, # CodeGen: 1 */
 /*##                                   */
 /*##     Abstract  :                   */
 /*##                                   */

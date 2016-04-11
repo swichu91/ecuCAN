@@ -59,7 +59,7 @@ all: CAN_FreeRTOS.elf secondary-outputs
 CAN_FreeRTOS.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "D:/Moje/GIT/ecuCAN/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"D:/Moje/GIT/ecuCAN/Project_Settings/Linker_Files" -Wl,-Map,"CAN_FreeRTOS.map" -specs=nano.specs -specs=nosys.specs -o "CAN_FreeRTOS.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Project_Settings/Linker_Files" -Wl,-Map,"CAN_FreeRTOS.map" -specs=nano.specs -specs=nosys.specs -o "CAN_FreeRTOS.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

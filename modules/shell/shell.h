@@ -10,13 +10,11 @@
 
 #include "shell_conf.h"
 #include <stdint.h>
+#include <stddef.h>
+#include <assert.h>
 
-typedef struct _shell_conf
-{
 
-
-}shell_conf;
-
+#define SHELL_ASSERT(X)	assert(X)
 
 typedef struct _cmd_entry
 {
@@ -25,18 +23,60 @@ typedef struct _cmd_entry
 	char* desc;
 	char* name;
 
-}cmd_entry;
+}cmd_entry_t;
 
-void foo_test(char **arg_tab, uint8_t arg_cnt)
-{
+typedef struct _shell {
 
-}
+	void* hist_queue;
+
+	char* line_buff;
+	uint32_t line_buff_pos;
+	size_t line_buff_size;
+
+	cmd_entry_t *cmd_etab[SHELL_MAX_NR_REGISTERED_COMMANDS];
+
+	uint8_t (*shell_write)(char* str, size_t len);
+	uint8_t (*shell_read)(char* str);
+
+	char *bs_code;
+	char *newline_code;
+	char *arrowl_code;
+	char *arrowr_code;
+	char *arrowu_code;
+	char *arrowd_code;
+
+} shell_t;
 
 
-cmd_entry cmd_tab[SHELL_MAX_NR_REGISTERED_COMMANDS]=
-{
-		{foo_test,NULL,NULL,"test"}
-};
+
+typedef enum{
+	SHELL_OK=0,
+	SHELL_ERR_GEN=1,
+	SHELL_ERR_TAB_FULL=2,
+	SHELL_ERR_SPACE=3,
+	SHELL_ERR_MEM=4,
+
+}sherr_t;
+
+
+sherr_t shell_Init(shell_t* shell, size_t linebuf_len);
+
+void shell_RegisterFunctions(shell_t* shell,
+		uint8_t (*shell_write)(char* str, size_t len),
+		uint8_t (*shell_read)(char* str_out));
+
+void shell_RegisterCmdTab(shell_t* shell, cmd_entry_t* cmd_tab, size_t ele);
+
+sherr_t shell_AppendCmdTab(shell_t* shell, cmd_entry_t* cmd_tab, size_t ele);
+
+uint8_t shell_RegisterCodes(shell_t* shell, char *bs_code, char *newline_code,
+		char *arrowl_code, char *arrowr_code, char *arrowu_code,
+		char *arrowd_code);
+
+void shell_RunPeriodic(shell_t* shell);
+
+
+
 
 
 #endif /* MODULES_SHELL_SHELL_H_ */
