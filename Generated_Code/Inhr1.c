@@ -7,7 +7,7 @@
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2016-04-06, 19:14, # CodeGen: 1
+**     Date/Time   : 2016-04-15, 23:20, # CodeGen: 8
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -20,7 +20,7 @@
 **          Channel                                        : UART2
 **          Interrupt service/event                        : Enabled
 **            Interrupt RxD                                : INT_UART2
-**            Interrupt RxD priority                       : medium priority
+**            Interrupt RxD priority                       : high priority
 **            Interrupt TxD                                : INT_UART2
 **            Interrupt TxD priority                       : medium priority
 **            Interrupt Error                              : INT_UART2
@@ -58,6 +58,7 @@
 **     Contents    :
 **         RecvChar        - byte Inhr1_RecvChar(Inhr1_TComData *Chr);
 **         SendChar        - byte Inhr1_SendChar(Inhr1_TComData Chr);
+**         RecvBlock       - byte Inhr1_RecvBlock(Inhr1_TComData *Ptr, word Size, word *Rcv);
 **         GetCharsInRxBuf - word Inhr1_GetCharsInRxBuf(void);
 **         CharsInTxBuf    - byte Inhr1_CharsInTxBuf(word *Chr);
 **         GetCharsInTxBuf - word Inhr1_GetCharsInTxBuf(void);
@@ -266,6 +267,62 @@ byte Inhr1_SendChar(Inhr1_TComData Chr)
   }
   ExitCritical();                      /* Enable global interrupts */
   return ERR_OK;                       /* OK */
+}
+
+/*
+** ===================================================================
+**     Method      :  Inhr1_RecvBlock (component AsynchroSerial)
+**     Description :
+**         If any data is received, this method returns the block of
+**         the data and its length (and incidental error), otherwise it
+**         returns an error code (it does not wait for data).
+**         This method is available only if non-zero length of the
+**         input buffer is defined and the receiver property is enabled.
+**         If less than requested number of characters is received only
+**         the available data is copied from the receive buffer to the
+**         user specified destination. The value ERR_EXEMPTY is
+**         returned and the value of variable pointed by the Rcv
+**         parameter is set to the number of received characters.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**       * Ptr             - Pointer to the block of received data
+**         Size            - Size of the block
+**       * Rcv             - Pointer to real number of the received data
+**     Returns     :
+**         ---             - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - This device does not work in
+**                           the active speed mode
+**                           ERR_RXEMPTY - The receive buffer didn't
+**                           contain the requested number of data. Only
+**                           available data has been returned.
+**                           ERR_COMMON - common error occurred (the
+**                           GetError method can be used for error
+**                           specification)
+** ===================================================================
+*/
+byte Inhr1_RecvBlock(Inhr1_TComData *Ptr, word Size, word *Rcv)
+{
+  register word count;                 /* Number of received chars */
+  register byte result = ERR_OK;       /* Last error */
+
+  for (count = 0x00U; count < Size; count++) {
+    switch (Inhr1_RecvChar(Ptr++)) {   /* Receive data and test the return value*/
+    case ERR_RXEMPTY:                  /* No data in the buffer */
+      if (result == ERR_OK) {          /* If no receiver error reported */
+        result = ERR_RXEMPTY;          /* Return info that requested number of data is not available */
+      }
+     *Rcv = count;                     /* Return number of received chars */
+      return result;
+    case ERR_COMMON:                   /* Receiver error reported */
+      result = ERR_COMMON;             /* Return info that an error was detected */
+      break;
+    default:
+      break;
+    }
+  }
+  *Rcv = count;                        /* Return number of received chars */
+  return result;                       /* OK */
 }
 
 /*

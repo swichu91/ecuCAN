@@ -12,7 +12,7 @@
 
 uint8_t foo_test(char **arg_tab, uint8_t arg_cnt)
 {
-
+	DbgTerminal_SendStr("haha dziala\r\n");
 }
 
 

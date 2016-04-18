@@ -50,6 +50,7 @@
       <Path>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Sources\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Static_Code\System\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\can_t\</Path>
+      <Path>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\hd44780\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\queue\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\shell\</Path>
       <Path>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\terminal\</Path>
@@ -61,14 +62,28 @@
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd2.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd3.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd4.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd5.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd6.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd7.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd8.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd9.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BlueLED.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\CAN1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Cpu.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_4.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_5.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_6.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_7.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\DbgTerminal.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Enable.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\GreenLED.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Inhr1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\PE_LDD.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Pins1.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\R_W.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Reg_sel.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\TU1.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Project_Settings\Startup_Code\startup.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Sources\Events.c</PathName>
@@ -78,8 +93,10 @@
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Static_Code\System\Peripherals_Init.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Static_Code\System\Vectors.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\can_t\can_t.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\hd44780\hd44780.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\queue\fifo.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\queue\queue.c</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\shell\history_list.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\shell\shell.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\terminal\terminal.c</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\timer_timeout\timer_timeout.c</PathName>
@@ -88,11 +105,23 @@
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd2.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd3.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd4.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd5.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd6.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd7.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd8.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BitIoLdd9.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\BlueLED.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\CAN1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\CPU_Config.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Cpu.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_4.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_5.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_6.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Data_7.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\DbgTerminal.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Enable.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\GreenLED.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\IO_Map.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Inhr1.h</PathName>
@@ -102,6 +131,8 @@
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\PE_LDD.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\PE_Types.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Pins1.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\R_W.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Reg_sel.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\TU1.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Generated_Code\Vectors_Config.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Sources\Events.h</PathName>
@@ -135,11 +166,14 @@
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Static_Code\System\PDD_Includes.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\Static_Code\System\Peripherals_Init.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\can_t\can_t.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\hd44780\hd44780.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\queue\fifo.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\queue\queue.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\shell\history_list.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\shell\shell.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\shell\shell_conf.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\terminal\terminal.h</PathName>
+      <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\terminal\terminal_cmd.h</PathName>
       <PathName>E:\PROGRAMOWANIE\KDS_DEV\ecuCAN\modules\timer_timeout\timer_timeout.h</PathName>
     </GeneratedHs>
   </FILES>

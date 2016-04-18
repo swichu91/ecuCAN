@@ -118,11 +118,11 @@
 			</tr>
 			<tr>
 				<td>20</td><td>PTE6/KBI1_P6</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port6</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port6</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>21</td><td>PTE5/KBI1_P5</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port5</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port5</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>22</td><td>PTB5/KBI0_P13/FTM2_CH5/SPI0_PCS/ACMP1_OUT</td><td><small><i>same</i></small></td>
@@ -227,7 +227,7 @@
 			</tr>
 			<tr>
 				<td>47</td><td>PTE4/KBI1_P4</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port4</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port4</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>48</td><td>VSS48</td><td><small><i>same</i></small></td>
@@ -307,11 +307,11 @@
 			</tr>
 			<tr>
 				<td>67</td><td>PTE3/KBI1_P3/SPI0_PCS</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port3</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port3</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>68</td><td>PTE2/KBI1_P2/SPI0_MISO/PWT_IN0</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port2</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port2</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>69</td><td>VSS69</td><td><small><i>same</i></small></td>
@@ -339,11 +339,11 @@
 			</tr>
 			<tr>
 				<td>75</td><td>PTE1/KBI1_P1/SPI0_MOSI/I2C1_SCL</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>76</td><td>PTE0/KBI1_P0/SPI0_SCK/TCLK1/I2C1_SDA</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port0</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port0</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>77</td><td>PTC5/KBI0_P21/FTM1_CH1/RTCO</td><td><small><i>same</i></small></td>
@@ -1300,11 +1300,11 @@
 			</tr>
 			<tr>
 				<td>20</td><td>PTE6/KBI1_P6</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port6</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port6</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>21</td><td>PTE5/KBI1_P5</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port5</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port5</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>22</td><td>PTB5/KBI0_P13/FTM2_CH5/SPI0_PCS/ACMP1_OUT</td><td><small><i>same</i></small></td>
@@ -1409,7 +1409,7 @@
 			</tr>
 			<tr>
 				<td>47</td><td>PTE4/KBI1_P4</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port4</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port4</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>48</td><td>VSS48</td><td><small><i>same</i></small></td>
@@ -1489,11 +1489,11 @@
 			</tr>
 			<tr>
 				<td>67</td><td>PTE3/KBI1_P3/SPI0_PCS</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port3</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port3</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>68</td><td>PTE2/KBI1_P2/SPI0_MISO/PWT_IN0</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port2</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port2</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>69</td><td>VSS69</td><td><small><i>same</i></small></td>
@@ -1521,11 +1521,11 @@
 			</tr>
 			<tr>
 				<td>75</td><td>PTE1/KBI1_P1/SPI0_MOSI/I2C1_SCL</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port1</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>76</td><td>PTE0/KBI1_P0/SPI0_SCK/TCLK1/I2C1_SDA</td><td><small><i>same</i></small></td>
-				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port0</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Not Specified</td>
+				<td bgcolor='#F7DCFF'>GPIOB</td><td bgcolor='#F7DCFF'>port0</td><td bgcolor='#F7DCFF'>alt0</td><td bgcolor='#F7DCFF'>Output</td>
 			</tr>
 			<tr>
 				<td>77</td><td>PTC5/KBI0_P21/FTM1_CH1/RTCO</td><td><small><i>same</i></small></td>

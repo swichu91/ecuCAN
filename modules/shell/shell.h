@@ -29,6 +29,7 @@ typedef struct _shell {
 
 	void* hist_queue;
 
+	char* line_prefix;
 	char* line_buff;
 	uint32_t line_buff_pos;
 	size_t line_buff_size;
@@ -69,9 +70,10 @@ void shell_RegisterCmdTab(shell_t* shell, cmd_entry_t* cmd_tab, size_t ele);
 
 sherr_t shell_AppendCmdTab(shell_t* shell, cmd_entry_t* cmd_tab, size_t ele);
 
-uint8_t shell_RegisterCodes(shell_t* shell, char *bs_code, char *newline_code,
-		char *arrowl_code, char *arrowr_code, char *arrowu_code,
-		char *arrowd_code);
+uint8_t shell_RegisterCodes(shell_t* const shell, const char *prefix, const char *bs_code,
+		const char *newline_code, const char *arrowl_code,
+		const char *arrowr_code, const char *arrowu_code,
+		const char *arrowd_code);
 
 void shell_RunPeriodic(shell_t* shell);
 

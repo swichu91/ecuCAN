@@ -13,6 +13,7 @@
 #include "can_t/can_t.h"
 #include "DbgTerminal.h"
 #include "terminal/terminal.h"
+#include "hd44780/hd44780.h"
 
 uint8_t test_foo(uint8_t* data,size_t dlen, uint32_t id,void* dptr)
 {
@@ -25,22 +26,35 @@ uint8_t test_foo2(uint8_t* data,size_t dlen, uint32_t id,void* dptr)
 
 }
 
+obiektLCD napis1;
+obiektLCD napis2;
+obiektLCD napis3;
+obiektLCD napis4;
+
+
 void vmain(void) {
 
 	can_inst=CAN1_Init(NULL);
 
 	CANt_init();
 	terminal_init();
+	hd44780_init();
+	hd44780_place_cursor(0,0);
+	hd44780_put_string("test init");
 
 	mtimer_t gen_timer;
 	mtimer_RegisterTimer(&gen_timer, 1000, 1000);
 	mtimer_start(&gen_timer);
 
+	mtimer_t timer_100ms;
+
+	mtimer_RegisterTimer(&timer_100ms, 100, 100);
+	mtimer_start(&timer_100ms);
+
 	CANt_RegisterCallback(test_foo,0x44,NULL);
 	CANt_RegisterCallback(test_foo2,0x45,NULL);
 
 	for (;;) {
-
 
 		CANt_RunPeriodic();
 		terminal_RunPeriodic();
@@ -54,8 +68,39 @@ void vmain(void) {
 			CANt_send_string(0x67,0,"hej1");
 			CANt_send_string(0x68,0,"hej2");
 
+			static uint8_t cnt=0;
+			char buff[10];
+
+			sprintf(buff,"hoho%d",cnt);
+
+			bRAM(buff,0,2,&napis1);
+
+			sprintf(buff,"test%d",cnt);
+			bRAM(buff,0,1,&napis2);
+
+			sprintf(buff,"cos%d",cnt);
+			bRAM(buff,8,1,&napis3);
+
+			cnt++;
+
 
 		}
+
+		if (mtimer_isTimeout(&timer_100ms) == 1){
+
+			mtimer_reload(&timer_100ms);
+
+			char buff[10];
+
+			static uint8_t cnt=0;
+
+			sprintf(buff,"inne%d",cnt++);
+			bRAM(buff,8,2,&napis4);
+
+			hd44780_RunPeriodic();
+		}
+
+
 	}
 
 }

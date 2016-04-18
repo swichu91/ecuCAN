@@ -28,6 +28,7 @@ modules/timer_timeout \
 modules/terminal \
 modules/shell \
 modules/queue \
+modules/hd44780 \
 modules/can_t \
 Static_Code/System \
 Sources \

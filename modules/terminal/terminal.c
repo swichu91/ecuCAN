@@ -13,6 +13,14 @@
 
 static shell_t shell_usart;
 
+static const char  terminal_BS = 0x7F;
+static const char* terminal_NEWLINE = "\r\n";
+static const char* terminal_ARROW_LEFT = "D";
+static const char* terminal_ARROW_RIGHT = "C";
+static const char* terminal_ARROW_UP = "A";
+static const char* terminal_ARROW_DOWN = "B";
+static const char* terminal_prefix = ">";
+
 static uint8_t terminal_write (char* str, size_t len)
 {
 	uint8_t i;
@@ -42,7 +50,7 @@ void terminal_init(void) {
 
 	shell_Init(&shell_usart,50);
 	shell_RegisterCmdTab(&shell_usart,cmd_tab_usart,sizeof cmd_tab_usart / sizeof cmd_tab_usart[0]);
-	shell_RegisterCodes(&shell_usart,TERMINAL_BS,TERMINAL_NEWLINE,TERMINAL_ARROW_LEFT,TERMINAL_ARROW_RIGHT,TERMINAL_ARROW_UP,TERMINAL_ARROW_DOWN);
+	shell_RegisterCodes(&shell_usart,terminal_prefix,&terminal_BS,terminal_NEWLINE,terminal_ARROW_LEFT,terminal_ARROW_RIGHT,terminal_ARROW_UP,terminal_ARROW_DOWN);
 	shell_RegisterFunctions(&shell_usart,terminal_write,terminal_read);
 
 

@@ -31,6 +31,27 @@ Generated_Code/TU1.o: ../Generated_Code/TU1.c \
  E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Inhr1.h \
  E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/ASerialLdd1.h \
  E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/ASerialLdd1.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Enable.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd3.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd3.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/R_W.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd4.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd4.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Reg_sel.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd5.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd5.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_7.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd6.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd6.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_6.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd7.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd7.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_5.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd8.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd8.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_4.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd9.h \
+ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd9.h \
  ../Generated_Code/TU1.h ../Generated_Code/IO_Map.h
 
 E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Sources/Events.h:
@@ -96,6 +117,48 @@ E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Inhr1.h:
 E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/ASerialLdd1.h:
 
 E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/ASerialLdd1.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Enable.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd3.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd3.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/R_W.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd4.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd4.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Reg_sel.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd5.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd5.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_7.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd6.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd6.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_6.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd7.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd7.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_5.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd8.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd8.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/Data_4.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd9.h:
+
+E:/PROGRAMOWANIE/KDS_DEV/ecuCAN/Generated_Code/BitIoLdd9.h:
 
 ../Generated_Code/TU1.h:
 

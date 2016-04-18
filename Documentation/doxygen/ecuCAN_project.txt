@@ -29,6 +29,13 @@
 - \subpage CAN1
 - \subpage BitIoLdd2
 - \subpage ASerialLdd1
+- \subpage BitIoLdd3
+- \subpage BitIoLdd4
+- \subpage BitIoLdd5
+- \subpage BitIoLdd6
+- \subpage BitIoLdd7
+- \subpage BitIoLdd8
+- \subpage BitIoLdd9
 
 */
 
@@ -64,6 +71,13 @@
 - \subpage CAN1
 - \subpage BitIoLdd2
 - \subpage ASerialLdd1
+- \subpage BitIoLdd3
+- \subpage BitIoLdd4
+- \subpage BitIoLdd5
+- \subpage BitIoLdd6
+- \subpage BitIoLdd7
+- \subpage BitIoLdd8
+- \subpage BitIoLdd9
 
 */
 

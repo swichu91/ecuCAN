@@ -43,6 +43,20 @@
 #include "DbgTerminal.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
+#include "Enable.h"
+#include "BitIoLdd3.h"
+#include "R_W.h"
+#include "BitIoLdd4.h"
+#include "Reg_sel.h"
+#include "BitIoLdd5.h"
+#include "Data_7.h"
+#include "BitIoLdd6.h"
+#include "Data_6.h"
+#include "BitIoLdd7.h"
+#include "Data_5.h"
+#include "BitIoLdd8.h"
+#include "Data_4.h"
+#include "BitIoLdd9.h"
 
 #ifdef __cplusplus
 extern "C" {

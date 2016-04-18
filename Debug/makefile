@@ -12,6 +12,7 @@ RM := rm -rf
 -include modules/terminal/subdir.mk
 -include modules/shell/subdir.mk
 -include modules/queue/subdir.mk
+-include modules/hd44780/subdir.mk
 -include modules/can_t/subdir.mk
 -include Static_Code/System/subdir.mk
 -include Sources/subdir.mk

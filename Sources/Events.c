@@ -205,7 +205,7 @@ void CAN1_OnFullRxBuffer(LDD_TUserData *UserDataPtr, LDD_CAN_TMBIndex BufferIdx)
 void Inhr1_OnRxChar(void) {
 	/* Write your code here ... */
 	char byte;
-	DbgTerminal_ReadChar(&byte);
+	Inhr1_RecvChar(&byte);
 
 	queue_enqueue(terminal_rx_queue, &byte);
 

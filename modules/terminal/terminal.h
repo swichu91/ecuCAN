@@ -13,13 +13,6 @@
 QueueRecord_t* terminal_rx_queue;
 QueueRecord_t* terminal_tx_queue;
 
-#define TERMINAL_BS	8 // TODO: it must be passed as pointer to init function !
-#define TERMINAL_NEWLINE	"\r\n"
-#define TERMINAL_ARROW_LEFT "C" // not tested
-#define TERMINAL_ARROW_RIGHT "D" // not tested
-#define TERMINAL_ARROW_UP	"A"
-#define TERMINAL_ARROW_DOWN	"B"
-
 void terminal_init(void);
 void terminal_RunPeriodic(void);
 
