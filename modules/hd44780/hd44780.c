@@ -13,6 +13,9 @@
 
 static char row_buff[HD44780_ROWS_NR][HD44780_ROWS_CNT + 1]; // rows buffers
 
+
+static void hd44780_put_on_LCD(uint8_t row);
+
 void hd44780_write(unsigned char x, unsigned char op) {
 
 	uint8_t busy;
@@ -171,6 +174,30 @@ void hd44780_init(void) {
 	//_delay_ms(100);
 
 	hd44780_clear_row_buff(CLEAR_ALL);
+
+	//create custom characters
+	hd44780_write(0x40, HD44780_COMM);
+
+	//arrow up
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b01110, HD44780_DATA);
+	hd44780_write(0b10101, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+
+	//arrow down
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+	hd44780_write(0b10101, HD44780_DATA);
+	hd44780_write(0b01110, HD44780_DATA);
+	hd44780_write(0b00100, HD44780_DATA);
+
 }
 
 void hd44780_clear_row_buff(cleare_t mode) {
@@ -180,13 +207,13 @@ void hd44780_clear_row_buff(cleare_t mode) {
 
 	case CLEAR_ROW1:
 		memset(row_buff[0], 32, HD44780_ROWS_CNT + 1);
-		row_buff[0][HD44780_ROWS_CNT] = 0;
+		row_buff[0][HD44780_ROWS_CNT] = '\0';
 
 		break;
 
 	case CLEAR_ROW2:
 		memset(row_buff[1], 32, HD44780_ROWS_CNT + 1);
-		row_buff[1][HD44780_ROWS_CNT] = 0;
+		row_buff[1][HD44780_ROWS_CNT] = '\0';;
 
 		break;
 
@@ -194,7 +221,7 @@ void hd44780_clear_row_buff(cleare_t mode) {
 
 		case CLEAR_ROW3:
 		memset(buffer3,32,HD44780_ROWS_CNT+1);
-		buffer3[HD44780_ROWS_CNT] = 0;
+		buffer3[HD44780_ROWS_CNT] = '\0';
 
 		break;
 #endif
@@ -203,7 +230,7 @@ void hd44780_clear_row_buff(cleare_t mode) {
 
 		case CLEAR_ROW3:
 		memset(buffer4,32,HD44780_ROWS_CNT+1);
-		buffer4[HD44780_ROWS_CNT] = 0;
+		buffer4[HD44780_ROWS_CNT] = '\0';
 
 		break;
 #endif
@@ -216,7 +243,7 @@ void hd44780_clear_row_buff(cleare_t mode) {
 		for (i = 0; i < HD44780_ROWS_NR; i++) {
 
 			memset(row_buff[i], 32, HD44780_ROWS_CNT + 1);
-			row_buff[i][HD44780_ROWS_CNT] = 0;
+			row_buff[i][HD44780_ROWS_CNT] = '\0';
 		}
 	}
 
@@ -225,12 +252,12 @@ void hd44780_clear_row_buff(cleare_t mode) {
 	}
 }
 
-void hd44780_write_to_buff(char *txt, unsigned char Px, unsigned char Py, obiektLCD *obiekt) {
+void hd44780_write_to_buff(char *txt,size_t len, unsigned char Px, unsigned char Py, obiektLCD *obiekt) {
 
 	assert((Px < HD44780_ROWS_CNT) && (Px >=0));
 	assert((Py < HD44780_ROWS_NR) && (Py >=0));
 
-	unsigned char i, j;
+	unsigned char j=0;
 
 	for (j = obiekt->X; j < ((obiekt->X) + obiekt->pozkonc); j++)
 		row_buff[Py][j] = 32;
@@ -238,13 +265,20 @@ void hd44780_write_to_buff(char *txt, unsigned char Px, unsigned char Py, obiekt
 	obiekt->X = Px;
 	obiekt->Y = Py;
 
-	while (*txt && (Px < HD44780_ROWS_CNT)) {
 
-		row_buff[Py][Px++] = *txt++;
-		i++;
+	if((len + Px) > HD44780_ROWS_CNT)
+	{
+		len = Px - HD44780_ROWS_CNT;
 	}
 
-	obiekt->pozkonc = i;
+	uint8_t cnt;
+
+	for(cnt=0;cnt< len;cnt++)
+	{
+		row_buff[Py][Px++] = *txt++;
+	}
+
+	obiekt->pozkonc = len;
 
 }
 
@@ -255,7 +289,16 @@ void hd44780_RunPeriodic(void) {
 	for (i = 0; i < HD44780_ROWS_NR; i++) {
 
 		hd44780_place_cursor(0, i);
-		hd44780_put_string(row_buff[i]);
+		hd44780_put_on_LCD(i);
 	}
 }
 
+static void hd44780_put_on_LCD(uint8_t row)
+{
+	uint8_t i=0;
+
+	for(i=0;i<HD44780_ROWS_CNT;i++)
+	{
+		hd44780_write(row_buff[row][i],HD44780_DATA);
+	}
+}

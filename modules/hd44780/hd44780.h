@@ -15,6 +15,8 @@
 #include "Enable.h"
 #include "R_W.h"
 #include "Reg_sel.h"
+#include <stdint.h>
+#include <stdlib.h>
 
 #define HD44780_ROWS_CNT	16
 #define HD44780_ROWS_NR	2
@@ -87,6 +89,6 @@ typedef struct								// struktura zapisuj¹ca wspolrzedne
 void hd44780_RunPeriodic(void);
 void hd44780_init(void);
 void hd44780_clear_row_buff(cleare_t mode);
-void hd44780_write_to_buff(char *txt, unsigned char Px, unsigned char Py, obiektLCD *obiekt);
+void hd44780_write_to_buff(char *txt,size_t len, unsigned char Px, unsigned char Py, obiektLCD *obiekt);
 
 #endif /* MODULES_HD44780_HD44780_H_ */

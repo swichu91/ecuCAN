@@ -30,7 +30,9 @@ obiektLCD napis1;
 obiektLCD napis2;
 obiektLCD napis3;
 obiektLCD napis4;
-
+obiektLCD napis5;
+obiektLCD napis6;
+obiektLCD napis7;
 
 void vmain(void) {
 
@@ -68,20 +70,22 @@ void vmain(void) {
 			CANt_send_string(0x67,0,"hej1");
 			CANt_send_string(0x68,0,"hej2");
 
-			static uint8_t cnt=0;
 			char buff[10];
 
-			sprintf(buff,"hoho%d",cnt);
+			hd44780_write_to_buff(0x01,1,0,0,&napis5);
+			sprintf(buff,"2222");
+			hd44780_write_to_buff(buff,strlen(buff),1,0,&napis1);
 
-			hd44780_write_to_buff(buff,0,1,&napis1);
+			hd44780_write_to_buff(0x00,1,7,0,&napis6);
+			sprintf(buff,"2233");
+			hd44780_write_to_buff(buff,strlen(buff),8,0,&napis3);
 
-			sprintf(buff,"test%d",cnt);
-			hd44780_write_to_buff(buff,0,0,&napis2);
+			sprintf(buff,"353V");
+			hd44780_write_to_buff(buff,strlen(buff),13,0,&napis2);
 
-			sprintf(buff,"cos%d",cnt);
-			hd44780_write_to_buff(buff,8,0,&napis3);
+			sprintf(buff,"66%");
+			hd44780_write_to_buff(buff,strlen(buff),14,1,&napis4);
 
-			cnt++;
 
 
 		}
@@ -89,13 +93,6 @@ void vmain(void) {
 		if (mtimer_isTimeout(&timer_100ms) == 1){
 
 			mtimer_reload(&timer_100ms);
-
-			char buff[10];
-
-			static uint8_t cnt=0;
-
-			sprintf(buff,"inne%d",cnt++);
-			hd44780_write_to_buff(buff,8,1,&napis4);
 
 			hd44780_RunPeriodic();
 		}
