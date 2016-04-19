@@ -16,8 +16,8 @@
 #include "R_W.h"
 #include "Reg_sel.h"
 
-#define HD44780_ROWS_NR	16
-
+#define HD44780_ROWS_CNT	16
+#define HD44780_ROWS_NR	2
 
 #define HD44780_SET_D7 Data_7_SetVal()		// 4 bit LCD, makra poszczególnych kana³ów danych
 #define HD44780_CLR_D7 Data_7_ClrVal()
@@ -63,8 +63,17 @@
 #define clr 1			// obsluga LCD z czyszczeniem
 #define all 3
 
-char buffer1[HD44780_ROWS_NR+1];				// buffer 1 wiersza
-char buffer2[HD44780_ROWS_NR+1];				// buffer 2 wiersza
+typedef enum
+{
+	CLEAR_OFF =0,
+	CLEAR_ROW1 = 1,
+	CLEAR_ROW2 =2,
+	CLEAR_ROW3 =3,
+	CLEAR_ROW4 =4,
+	CLEAR_ALL =5
+}cleare_t;
+
+
 
 volatile unsigned char LCD_refresh, tick; 			// flaga do odswiezania LCD
 
@@ -77,5 +86,7 @@ typedef struct								// struktura zapisuj¹ca wspolrzedne
 
 void hd44780_RunPeriodic(void);
 void hd44780_init(void);
+void hd44780_clear_row_buff(cleare_t mode);
+void hd44780_write_to_buff(char *txt, unsigned char Px, unsigned char Py, obiektLCD *obiekt);
 
 #endif /* MODULES_HD44780_HD44780_H_ */

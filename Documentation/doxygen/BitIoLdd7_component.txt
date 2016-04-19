@@ -126,7 +126,7 @@ registers of the peripheral(s) configured by the component.
 **            Init. direction                              : Output
 **            Init. value                                  : 0
 **            Auto initialization                          : yes
-**          Safe mode                                      : yes
+**          Safe mode                                      : no
 <h1>
 \endcode
 */

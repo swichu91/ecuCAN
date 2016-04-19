@@ -7,6 +7,11 @@
 
 #include "hd44780/hd44780.h"
 #include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+static char row_buff[HD44780_ROWS_NR][HD44780_ROWS_CNT + 1]; // rows buffers
 
 void hd44780_write(unsigned char x, unsigned char op) {
 
@@ -165,72 +170,78 @@ void hd44780_init(void) {
 	hd44780_write(0x0C, HD44780_COMM);
 	//_delay_ms(100);
 
-	bCLR(all);
+	hd44780_clear_row_buff(CLEAR_ALL);
 }
 
-void bCLR(unsigned char mode) {
+void hd44780_clear_row_buff(cleare_t mode) {
 	unsigned char i;
 
 	switch (mode) {
-	case 1: {
 
-		for (i = 0; i <= 16; i++) {
-			buffer1[i] = 32;
-		}
-		buffer1[16] = 0;
+	case CLEAR_ROW1:
+		memset(row_buff[0], 32, HD44780_ROWS_CNT + 1);
+		row_buff[0][HD44780_ROWS_CNT] = 0;
 
-	}
 		break;
-	case 2: {
-		for (i = 0; i <= 16; i++) {
-			buffer2[i] = 32;
 
-		}
-		buffer2[16] = 0;
-	}
+	case CLEAR_ROW2:
+		memset(row_buff[1], 32, HD44780_ROWS_CNT + 1);
+		row_buff[1][HD44780_ROWS_CNT] = 0;
+
 		break;
-	case 3: {
-		for (i = 0; i <= 16; i++) {
-			buffer1[i] = 32;
-			buffer2[i] = 32;
-		}
-		buffer1[16] = 0;
-		buffer2[16] = 0;
 
+#if HD44780_ROWS_NR > 2
+
+		case CLEAR_ROW3:
+		memset(buffer3,32,HD44780_ROWS_CNT+1);
+		buffer3[HD44780_ROWS_CNT] = 0;
+
+		break;
+#endif
+
+#if HD44780_ROWS_NR > 3
+
+		case CLEAR_ROW3:
+		memset(buffer4,32,HD44780_ROWS_CNT+1);
+		buffer4[HD44780_ROWS_CNT] = 0;
+
+		break;
+#endif
+
+	case CLEAR_ALL:
+
+	{
+		uint8_t i = 0;
+
+		for (i = 0; i < HD44780_ROWS_NR; i++) {
+
+			memset(row_buff[i], 32, HD44780_ROWS_CNT + 1);
+			row_buff[i][HD44780_ROWS_CNT] = 0;
+		}
 	}
+
 		break;
 
 	}
 }
 
-void bRAM(char *txt, unsigned char Px, unsigned char Py, obiektLCD *obiekt) {
+void hd44780_write_to_buff(char *txt, unsigned char Px, unsigned char Py, obiektLCD *obiekt) {
+
+	assert((Px < HD44780_ROWS_CNT) && (Px >=0));
+	assert((Py < HD44780_ROWS_NR) && (Py >=0));
 
 	unsigned char i, j;
 
-	if (obiekt->Y == 1) {
-		for (j = obiekt->X; j < ((obiekt->X) + obiekt->pozkonc); j++)
-			buffer1[j] = 32;
-
-	}
-	if (obiekt->Y == 2) {
-		for (j = obiekt->X; j < ((obiekt->X) + obiekt->pozkonc); j++)
-			buffer2[j] = 32;
-	}
+	for (j = obiekt->X; j < ((obiekt->X) + obiekt->pozkonc); j++)
+		row_buff[Py][j] = 32;
 
 	obiekt->X = Px;
 	obiekt->Y = Py;
 
-	while (*txt && (Px <= 16)) {
-		if (Py == 1) {
-			buffer1[Px++] = *txt++;
-			i++;
+	while (*txt && (Px < HD44780_ROWS_CNT)) {
 
-		}
-		if (Py == 2) {
-			buffer2[Px++] = *txt++;
-			i++;
-
-		}
+		row_buff[Py][Px++] = *txt++;
+		i++;
 	}
 
 	obiekt->pozkonc = i;
@@ -239,10 +250,12 @@ void bRAM(char *txt, unsigned char Px, unsigned char Py, obiektLCD *obiekt) {
 
 void hd44780_RunPeriodic(void) {
 
-	hd44780_place_cursor(0, 0);
-	hd44780_put_string(buffer1);
-	hd44780_place_cursor(0, 1);
-	hd44780_put_string(buffer2);
+	uint8_t i;
 
+	for (i = 0; i < HD44780_ROWS_NR; i++) {
+
+		hd44780_place_cursor(0, i);
+		hd44780_put_string(row_buff[i]);
+	}
 }
 

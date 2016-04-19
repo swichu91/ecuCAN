@@ -73,13 +73,13 @@ void vmain(void) {
 
 			sprintf(buff,"hoho%d",cnt);
 
-			bRAM(buff,0,2,&napis1);
+			hd44780_write_to_buff(buff,0,1,&napis1);
 
 			sprintf(buff,"test%d",cnt);
-			bRAM(buff,0,1,&napis2);
+			hd44780_write_to_buff(buff,0,0,&napis2);
 
 			sprintf(buff,"cos%d",cnt);
-			bRAM(buff,8,1,&napis3);
+			hd44780_write_to_buff(buff,8,0,&napis3);
 
 			cnt++;
 
@@ -95,7 +95,7 @@ void vmain(void) {
 			static uint8_t cnt=0;
 
 			sprintf(buff,"inne%d",cnt++);
-			bRAM(buff,8,2,&napis4);
+			hd44780_write_to_buff(buff,8,1,&napis4);
 
 			hd44780_RunPeriodic();
 		}
